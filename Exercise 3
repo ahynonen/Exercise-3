@@ -1,0 +1,85 @@
+<?php
+
+#1 
+$m = date("M");
+
+if ($m == "Aug") {
+    echo "It's August, so it's still holiday.";
+} else {
+    echo "Not August, This month is $m so I don't have any holidays";
+}
+echo "<br>";
+
+#2
+$color = "red";
+
+if ($color == "red") {
+    echo "The color is red.";
+} else {
+    echo "The color is not red.";
+}
+echo "<br>";
+
+#3
+$g = "90";
+
+if ($g > "80") {
+    echo "Excellent";
+} elseif ($g > "70") {
+    echo "Great";
+} elseif ($g > "60") {
+    echo "Good";
+} elseif ($g > "50") {
+    echo "Pass";
+} elseif ($g < "50") {
+    echo "Fail"; }
+ 
+#4
+echo '<!DOCTYPE html> 
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<form action="exercise3.php" method="post">
+			<p>Name: </p>
+			<input type="text" name="name"> 
+			<p>Age: </p>	
+			<input type="number" name="age"> 
+			<input type="submit" name="submit">
+		</form>
+	</body>
+	</html>';
+
+            if ($_POST['age'] >= 18) { 
+                echo "You are eligible to vote.<br>";
+                unset($_POST);
+            } else {
+                echo "You aren't eligible to vote.<br>";
+                unset($_POST);
+            }
+        
+
+#5
+$string = "12345678";
+
+for ($i = 0; $i < strlen($string); $i++){
+    echo mb_substr($string, 0, strlen($string)-$i)."<br>";
+}
+
+#6
+$star = "*";
+$i = "1";
+while($i<=8) {
+    echo str_repeat($star, $i)."<br>";
+    $i++;
+}
+
+#7
+echo "https://github.com/ahynonen/project-webdev2022/tree/main/project2022"
+
+
+
+?>
